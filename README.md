@@ -9,6 +9,23 @@ met = tkinter.Tk()
 met.title('metro de alge :)')  # title de forme
 met.geometry('600x400')  # size the forme
 met.config(background='light green')  # color de bg
+####################################################################
+# bach n3rfe cha5se male or fimale or mou5anet
+from tkinter import *
+met.geometry('600x400')
+v = StringVar()
+v.set('male')
+rdom = Radiobutton(met,text = 'Male',value = 'male',variable = v,bg = 'light green')
+rdom.pack()
+
+rdof = Radiobutton(met,text = 'Fimale',value = 'fimale',variable = v,bg = 'light green')
+rdof.pack()
+
+rdon = Radiobutton(met,text = 'Effeminate',value = 'effeminate',variable = v,bg = 'light green')
+rdon.pack()
+def f():
+    print(v.get())
+Button(met,text = 'ok',command =f).pack()
 #####################################################################
 # ther code ndir lforma flwste
 w = 600
@@ -37,8 +54,8 @@ lis.current(0) # lasm ta3 lmhata li y5roj lwle f lalist hna rani dert lwale
 lis.pack() # hna bach ytb3holi
 def ntealg(): # dala li ji fiha messagebox
     messagebox.showinfo('welom to metro alg ','yor destinasyon is  50 DA ticit: '+lis.get()) # mesage box li y5roj llmouste5dm
-metn = ttk.Button(met,text = 'clic here',command = ntealg) # hna lboutton bach ki nclici 3lih y5rjli lamer 
-metn.pack() # whna std3itha bach t5rjli ntija 
+metn = ttk.Button(met,text = 'clic here',command = ntealg) # hna lboutton bach ki nclici 3lih y5rjli lamer
+metn.pack() # whna std3itha bach t5rjli ntija
 
-met.mainloop() # fien de programe 
+met.mainloop() # fien de programe
 

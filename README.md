@@ -47,15 +47,7 @@ botns.configure('TButton',font=fnt, background='red',foreground = 'blue') # colo
 #botn = ttk.Button(met, text='ok') # lbutton bhde dato
 #botn.pack() # hna std3it lboton
 #########################################################################
-# lalist ta3i o fiha ga3 li station
-lis = ttk.Combobox(met, font = 'tahoma 16', values = ('liste de metro alg - hai el badr','place des martyrs','ali boumendjel','tafourah grande poste','khelifa boukhalfa','1er mai','aissat idir','hamma','jardin dessais','les fusilles','cite amiroche','cite mer & soleil','hai el badr','liste de metro hai el badr - el harrach centre','bachdjerh tennis','bachdjarah','el harrach gare','el harrach centre','liste de metro hai el badr - ain naadja','les ateliers','gue de constantine','ain nadja'),state = 'readonly')
-lis.current(0) # lasm ta3 lmhata li y5roj lwle f lalist hna rani dert lwale
-lis.pack() # hna bach ytb3holi
-def ntealg(): # dala li ji fiha messagebox
-    messagebox.showinfo('welom to metro alg ','yor destinasyon is  50 DA ticit: '+lis.get()) # mesage box li y5roj llmouste5dm
 
-metn = ttk.Button(met,text = 'clic here',command = ntealg) # hna lboutton bach ki nclici 3lih y5rjli lamer
-metn.pack() # whna std3itha bach t5rjli ntija
 ##########################################################################
 #9aimate sondo9e
 lbx = Listbox(met,fg = 'red',bg = 'black',font = 'tahoma 15')
@@ -72,6 +64,17 @@ lbx.pack()
 def lis():
     print(lbx.get(ACTIVE))
 Button(met,text = 'enter yor name ',font = 'tahoma 16',command = lis).pack()
+
+
+# lalist ta3i o fiha ga3 li station
+lis = ttk.Combobox(met, font = 'tahoma 16', values = ('liste de metro alg - hai el badr','place des martyrs','ali boumendjel','tafourah grande poste','khelifa boukhalfa','1er mai','aissat idir','hamma','jardin dessais','les fusilles','cite amiroche','cite mer & soleil','hai el badr','liste de metro hai el badr - el harrach centre','bachdjerh tennis','bachdjarah','el harrach gare','el harrach centre','liste de metro hai el badr - ain naadja','les ateliers','gue de constantine','ain nadja'),state = 'readonly')
+lis.current(0) # lasm ta3 lmhata li y5roj lwle f lalist hna rani dert lwale
+lis.pack() # hna bach ytb3holi
+def ntealg(): # dala li ji fiha messagebox
+    messagebox.showinfo('welom to metro alg ','yor destinasyon is  50 DA ticit: '+lis.get()) # mesage box li y5roj llmouste5dm
+
+metn = ttk.Button(met,text = 'clic here',command = ntealg) # hna lboutton bach ki nclici 3lih y5rjli lamer
+metn.pack() # whna std3itha bach t5rjli ntija
 
 
 

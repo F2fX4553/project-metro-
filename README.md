@@ -10,6 +10,12 @@ met = tkinter.Tk()
 met.title('metro de alge :)')  # title de forme
 met.geometry('800x500')  # size the forme
 met.config(background='light green')  # color de bg
+###################################################################
+# hna ndir tof
+canvas = Canvas(met,width = 600, height = 150) # hajm canvas
+canvas.pack() # ybyli canvas
+img = PhotoImage(file = 'python-logo.png') # hna tof asmha
+canvas.create_image(0,0,image=img,anchor=NW) # hna mnin ybda rasm photo 
 ####################################################################
 # bach n3rfe cha5se male or fimale or mou5anet
 v = StringVar()

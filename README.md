@@ -8,7 +8,7 @@ from tkinter import *
 
 met = tkinter.Tk()
 met.title('metro de alge :)')  # title de forme
-met.geometry('600x400')  # size the forme
+met.geometry('800x500')  # size the forme
 met.config(background='light green')  # color de bg
 ####################################################################
 # bach n3rfe cha5se male or fimale or mou5anet
@@ -64,19 +64,27 @@ lbx.pack()
 def lis():
     print(lbx.get(ACTIVE))
 Button(met,text = 'enter yor name ',font = 'tahoma 16',command = lis).pack()
-
-
+############################################################################
 # lalist ta3i o fiha ga3 li station
+
 lis = ttk.Combobox(met, font = 'tahoma 16', values = ('liste de metro alg - hai el badr','place des martyrs','ali boumendjel','tafourah grande poste','khelifa boukhalfa','1er mai','aissat idir','hamma','jardin dessais','les fusilles','cite amiroche','cite mer & soleil','hai el badr','liste de metro hai el badr - el harrach centre','bachdjerh tennis','bachdjarah','el harrach gare','el harrach centre','liste de metro hai el badr - ain naadja','les ateliers','gue de constantine','ain nadja'),state = 'readonly')
 lis.current(0) # lasm ta3 lmhata li y5roj lwle f lalist hna rani dert lwale
 lis.pack() # hna bach ytb3holi
+##############################################################################################################################################
+v = BooleanVar() #bach nchof wch y5rjli true or false or int or string
+cx = Checkbutton(met,text = ' enter yor trou',bg = 'light green',font = 'tahoma 15',variable = v) # hna bach ychkli lmourab3
+cx.pack() # hna bach ytb3o
+
+def s(): # hdi dala ta3 lboutouna
+    print(v.get()) # hdi bach ytba3li true or foalse
+Button(met,text = 'ok',bg = 'red',font = 'tahoma 16',command = s).pack() #hdi lboutton bach ki n3bze 3liha ida konte m3alm 3la lmourab3 yirli true ida nn ydirli foalse
+###################################################################################################################
 def ntealg(): # dala li ji fiha messagebox
     messagebox.showinfo('welom to metro alg ','yor destinasyon is  50 DA ticit: '+lis.get()) # mesage box li y5roj llmouste5dm
 
 metn = ttk.Button(met,text = 'clic here',command = ntealg) # hna lboutton bach ki nclici 3lih y5rjli lamer
 metn.pack() # whna std3itha bach t5rjli ntija
-
+#############################################################################
 
 
 met.mainloop() # fien de programe
-

@@ -9,28 +9,28 @@ from tkinter import *
 met = tkinter.Tk()
 met.title('metro de alge :)')  # title de forme
 met.geometry('800x500')  # size the forme
-met.config(background='light green')  # color de bg
+met.config(background= '#660000')  # color de bg
 ###################################################################
 # hna ndir tof
-canvas = Canvas(met,width = 600, height = 150) # hajm canvas
-canvas.pack() # ybyli canvas
-img = PhotoImage(file = 'python-logo.png') # hna tof asmha
-canvas.create_image(0,0,image=img,anchor=NW) # hna mnin ybda rasm photo 
+#canvas = Canvas(met,width = 600, height = 150) # hajm canvas
+#canvas.pack() # ybyli canvas
+#img = PhotoImage(file = 'python-logo.png') # hna tof asmha
+#canvas.create_image(0,0,image=img,anchor=NW) # hna mnin ybda rasm photo 
 ####################################################################
 # bach n3rfe cha5se male or fimale or mou5anet
 v = StringVar()
 v.set('male')
-rdom = Radiobutton(met,text = 'Male',value = 'male',variable = v,bg = 'light green')
+rdom = Radiobutton(met,text = 'Male',value = 'male',variable = v,bg = '#660000',fg='white')
 rdom.pack()
 
-rdof = Radiobutton(met,text = 'Fimale',value = 'fimale',variable = v,bg = 'light green')
+rdof = Radiobutton(met,text = 'Fimale',value = 'fimale',variable = v,bg = '#660000',fg = 'white')
 rdof.pack()
 
-rdon = Radiobutton(met,text = 'Effeminate',value = 'effeminate',variable = v,bg = 'light green')
+rdon = Radiobutton(met,text = 'Effeminate',value = 'effeminate',variable = v,bg = '#660000',fg = 'white')
 rdon.pack()
 def f():
     print(v.get())
-Button(met,text = 'enter yor sex',font = 'impact 15',background = 'blue',foreground = 'black',command =f).pack()
+Button(met,text = 'enter yor sex',font = 'impact 15',background = '#660000',foreground = 'white',command =f).pack()
 #####################################################################
 # ther code ndir lforma flwste
 w = 600
@@ -42,7 +42,7 @@ y = (sh - h) / 2
 met.geometry('%dx%d+%d+%d' % (w, h, x, y))
 #######################################################################
 # nkteb text welcom to metro DALG
-lbe = ttk.Label(met, text='* WELCOM TO METRO ALGERIA : مرحبا بكم في مترو الجزائر *', background='light green',
+lbe = ttk.Label(met, text='* WELCOM TO METRO ALGERIA : مرحبا بكم في مترو الجزائر *', background='#660000',
                 font='tahoma 25')  # text to metro
 lbe.pack()
 #########################################################################
@@ -56,7 +56,7 @@ botns.configure('TButton',font=fnt, background='red',foreground = 'blue') # colo
 
 ##########################################################################
 #9aimate sondo9e
-lbx = Listbox(met,fg = 'red',bg = 'black',font = 'tahoma 15')
+lbx = Listbox(met,fg = 'blue',bg = 'white',font = 'tahoma 15')
 lbx.insert(0,'oussama')
 lbx.insert(1,'kamale')
 lbx.insert(2,'fathi')
@@ -78,7 +78,7 @@ lis.current(0) # lasm ta3 lmhata li y5roj lwle f lalist hna rani dert lwale
 lis.pack() # hna bach ytb3holi
 ##############################################################################################################################################
 v = BooleanVar() #bach nchof wch y5rjli true or false or int or string
-cx = Checkbutton(met,text = ' enter yor trou',bg = 'light green',font = 'tahoma 15',variable = v) # hna bach ychkli lmourab3
+cx = Checkbutton(met,text = ' enter yor trou',bg = '#660000',font = 'tahoma 15',variable = v) # hna bach ychkli lmourab3
 cx.pack() # hna bach ytb3o
 
 def s(): # hdi dala ta3 lboutouna
